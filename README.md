@@ -1,4 +1,4 @@
-#Project: "Visit Madrid" Website
+# Project: "Visit Madrid" Website
 
 This project is about creating an informative website focused on the city of Madrid. The site
 features sections on news, history, tourist attractions, services, and contact details, all
