@@ -2,65 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>News & Events - Madrid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News and Events - Madrid</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Madrid</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="now" href="news.html">News</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="sightseeing.html">Sightseeing</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Madrid</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="now" href="news.html">News</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="sightseeing.html">Sightseeing</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Latest News & Events</h2>
+  
+  <main class="container">
     <section class="event-grid">
       <article class="event">
-        <h3>Festival of San Isidro</h3>
-        <p>Celebrate Madrid's patron saint in May with parades, music, and food.</p>
+        <h3>San Isidro Festival</h3>
+        <time datetime="2024-05-15">May 15, 2024</time>
+        <p>Celebrate Madrid's patron saint in May with parades, music, and traditional food.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
 
       <article class="event">
         <h3>Madrid Open Tennis Tournament</h3>
-        <p>Catch top tennis stars in action every May at the Caja Mágica.</p>
+        <time datetime="2024-05-01">May 1-12, 2024</time>
+        <p>Enjoy top tennis stars in action every May at the Caja Mágica.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
+      </article>
+
+      <article class="event">
+        <h3>Real Madrid vs F.C Barcelona</h3>
+        <time datetime="2024-05-01">May 1-12, 2024</time>
+        <p>Experience the most watched match worldwide!</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
 
       <article class="event">
         <h3>Madrid Christmas Market</h3>
-        <p>Experience the festive atmosphere in December with holiday markets, lights, and activities around Plaza Mayor.</p>
+        <time datetime="2024-12-01">December 1-31, 2024</time>
+        <p>Enjoy the festive atmosphere in December with Christmas markets, lights, and activities around Plaza Mayor.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
       
       <article class="event">
         <h3>Three Kings Parade</h3>
-        <p>Join the traditional parade on January 5th, where the Three Wise Men bring gifts and joy to Madrid’s streets.</p>
+        <time datetime="2025-01-05">January 5, 2025</time>
+        <p>Join the traditional parade on January 5th, where the Three Kings bring gifts and joy to Madrid's streets.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
       
       <article class="event">
         <h3>Madrid Fashion Week</h3>
+        <time datetime="2024-09-01">September, 2024</time>
         <p>Discover the latest trends from Spanish and international designers during Fashion Week in February and September.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
       
       <article class="event">
-        <h3>Fiesta de la Paloma</h3>
-        <p>Celebrate one of Madrid’s most popular local festivals in August with street parties, traditional costumes, and music.</p>
+        <h3>La Paloma Festivities</h3>
+        <time datetime="2024-08-15">August 15, 2024</time>
+        <p>Celebrate one of Madrid's most popular local festivals in August with dances, traditional costumes, and music.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
       
       <article class="event">
-        <h3>Veranos de la Villa</h3>
-        <p>Enjoy a variety of summer cultural events including concerts, theater, and dance performances across the city from July to September.</p>
+        <h3>Summer in the City</h3>
+        <time datetime="2024-07-01">July - September, 2024</time>
+        <p>Enjoy a variety of cultural summer events, including concerts, theater, and dance performances throughout the city from July to September.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
+      </article>
+
+      <article class="event">
+        <h3>PHotoEspaña</h3>
+        <time datetime="2024-06-01">June - August, 2024</time>
+        <p>Explore the international festival of photography and visual arts that transforms Madrid into an open-air art gallery.</p>
+        <a href="#" class="event-link">More info <i class="fas fa-arrow-right"></i></a>
       </article>
     </section>
+
+    <section class="newsletter">
+      <h3>Subscribe to our newsletter</h3>
+      <p>Get the latest news and events from Madrid delivered straight to your inbox.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
   </main>
+  
   <footer>
-    <p>© 2024 Visit Madrid. All rights reserved.</p>
-    <p>Designed by Daniel Aquino Santiago & Máximo Martín Moreno</p>
+    <div class="container">
+      <p>&copy; 2024 Visit Madrid. All rights reserved.</p>
+      <p>Designed by Daniel Aquino Santiago & Máximo Martín Moreno</p>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const events = document.querySelectorAll('.event');
+      events.forEach((event, index) => {
+        event.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,70 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Services - Madrid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre los mejores servicios para visitantes en Madrid: alojamiento, restaurantes, transporte, tours guiados, compras y servicios de emergencia.">
+  <title>Servicios para Visitantes en Madrid</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Madrid</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="sightseeing.html">Sightseeing</a></li>
-        <li><a class="now" href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Madrid</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="sightseeing.html">Sightseeing</a></li>
+          <li><a class="now" href="services.html">Services</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Services for Visitors</h2>
-    <section class="services-grid">
-      <div>
-        <h3>Accommodation</h3>
-        <p>Find the best hotels, hostels, and apartments in Madrid for all budgets and preferences. 
-          We recommend <strong>Hotel Riu Plaza España</strong> for its rooftop views and central location, or 
-          <strong>The Hat Madrid</strong> for a trendy, budget-friendly hostel experience.
-        </p>
-      </div>
-      <div>
-        <h3>Restaurants</h3>
-        Don't miss <strong>Casa Botín</strong>, the oldest restaurant in the world, famous for its roast suckling pig, or 
-         <strong>Mercado de San Miguel</strong> for a variety of tapas in one place.
-      </div>
-      <div>
-        <h3>Transportation</h3>
-        <p>Get around the city with ease. Madrid's metro system is extensive and efficient. 
-          Consider purchasing a <strong>Madrid Tourist Travel Pass</strong> for unlimited public transport. 
-          For eco-friendly options, try <strong>BiciMAD</strong>, the city's bike-sharing service.
-        </p>
-      </div>
-      <div>
-        <h3>Guided Tours</h3>
-        <p>Join guided tours to learn about Madrid's history, art, and culture with local experts. 
-          We suggest a <strong>free walking tour of the historic center</strong> or a guided visit to the <strong>Prado Museum</strong>.
-        </p>
-      </div>
-      <div>
-        <h3>Shopping</h3>
-        <p>Discover Madrid's shopping areas, from luxury boutiques to artisan markets. 
-          Visit <strong>Gran Vía</strong> for high-street fashion, or explore <strong>El Rastro</strong>, Madrid's famous flea market held every Sunday.
-        </p>
-      </div>
-      <div>
-        <h3>Emergency Services</h3>
-        <p>Contact information and locations for hospitals, police stations, and other emergency services. 
-          In case of an emergency, call <strong>112</strong> (general emergency number). 
-          <strong>Hospital Universitario La Paz</strong> is one of the top hospitals in the city.
-        </p>
-      </div>
+
+  <main class="container">
+    <section class="services-grid" aria-label="Available services in Madrid">
+        <article class="service-card" id="accommodation">
+            <h3><i class="fas fa-bed"></i> Accommodation</h3>
+            <p>Find the best hotels, hostels, and apartments in Madrid for all budgets and preferences.</p>
+            <ul>
+                <li><strong>Hotel Riu Plaza España</strong>: Rooftop views and central location.</li>
+                <li><strong>The Hat Madrid</strong>: Modern and budget-friendly hostel experience.</li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('accommodation-details')">More information</button>
+            <div id="accommodation-details" class="details hidden">
+                <p>Madrid offers a wide range of accommodation options, from luxury hotels to affordable apartments. Book in advance during peak seasons (spring and autumn) to get the best rates.</p>
+            </div>
+        </article>
+
+        <article class="service-card" id="restaurants">
+            <h3><i class="fas fa-utensils"></i> Restaurants</h3>
+            <p>Discover Madrid's delicious cuisine in traditional and modern restaurants.</p>
+            <ul>
+                <li><strong>Casa Botín</strong>: The world's oldest restaurant, famous for its roast suckling pig.</li>
+                <li><strong>Mercado de San Miguel</strong>: A variety of tapas in one place.</li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('restaurant-details')">More information</button>
+            <div id="restaurant-details" class="details hidden">
+                <p>Madrid's culinary scene is diverse and exciting. Don't miss traditional dishes like cocido madrileño, callos a la madrileña, and tapas in La Latina.</p>
+            </div>
+        </article>
+
+        <article class="service-card" id="transportation">
+            <h3><i class="fas fa-subway"></i> Transportation</h3>
+            <p>Get around the city easily using Madrid's extensive and efficient public transportation system.</p>
+            <ul>
+                <li><strong>Madrid Tourist Travel Pass</strong>: Unlimited public transportation for tourists.</li>
+                <li><strong>BiciMAD</strong>: The city's shared bike service.</li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('transportation-details')">More information</button>
+            <div id="transportation-details" class="details hidden">
+                <p>Madrid's metro is one of the most comprehensive in Europe. You can also use city buses and commuter trains to explore the city and its surroundings.</p>
+            </div>
+        </article>
+
+        <article class="service-card" id="tours">
+            <h3><i class="fas fa-map-marked-alt"></i> Guided Tours</h3>
+            <p>Join guided tours to learn about Madrid's history, art, and culture with local experts.</p>
+            <ul>
+                <li><strong>Free walking tour of the historic center</strong></li>
+                <li><strong>Guided tour of the Prado Museum</strong></li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('tour-details')">More information</button>
+            <div id="tour-details" class="details hidden">
+                <p>Guided tours are an excellent way to discover Madrid's secrets. Many offer themed options like tapas tours, street art tours, or nighttime walks.</p>
+            </div>
+        </article>
+
+        <article class="service-card" id="shopping">
+            <h3><i class="fas fa-shopping-bag"></i> Shopping</h3>
+            <p>Discover Madrid's shopping areas, from luxury boutiques to artisanal markets.</p>
+            <ul>
+                <li><strong>Gran Vía</strong>: Fashion from major brands</li>
+                <li><strong>El Rastro</strong>: Famous Sunday flea market</li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('shopping-details')">More information</button>
+            <div id="shopping-details" class="details hidden">
+                <p>Madrid is a paradise for shopping lovers. Don't miss Serrano Street for luxury brands or Malasaña for vintage shops and independent designers.</p>
+            </div>
+        </article>
+
+        <article class="service-card" id="emergency">
+            <h3><i class="fas fa-ambulance"></i> Emergency Services</h3>
+            <p>Contact information and locations for hospitals, police stations, and other emergency services.</p>
+            <ul>
+                <li><strong>General emergency number: 112</strong></li>
+                <li><strong>Hospital Universitario La Paz</strong>: One of the city's top hospitals</li>
+            </ul>
+            <button class="btn-more" onclick="toggleDetails('emergency-details')">More information</button>
+            <div id="emergency-details" class="details hidden">
+                <p>In case of a medical emergency, you can also visit any public health center. For assistance in English, call 112 and request an English-speaking operator.</p>
+            </div>
+        </article>
     </section>
-  </main>
+
+    <section class="service-finder">
+        <h3>Find nearby services</h3>
+        <p>Use our tool to locate nearby services.</p>
+        <form id="service-finder-form">
+            <label for="service-type">Service type:</label>
+            <select id="service-type" name="service-type" required>
+                <option value="">Select a service</option>
+                <option value="hotel">Hotel</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="metro">Train station</option>
+                <option value="hospital">Hospital</option>
+            </select>
+            
+            <label for="location">Your location (optional):</label>
+            <input type="text" id="location" name="location" placeholder="E.g., Plaza Mayor">
+            
+            <button type="submit">Search</button>
+        </form>
+        <div id="service-results"></div>
+    </section>
+</main>
+
   <footer>
-    <p>© 2024 Visit Madrid. All rights reserved.</p>
-    <p>Designed by Daniel Aquino Santiago & Máximo Martín Moreno</p>
+    <div class="container">
+      <p>&copy; 2024 Visita Madrid. Todos los derechos reservados.</p>
+      <p>Diseñado por Daniel Aquino Santiago & Máximo Martín Moreno</p>
+    </div>
   </footer>
+
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.classList.toggle('hidden');
+    }
+
+    document.getElementById('service-finder-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const serviceType = document.getElementById('service-type').value;
+      const location = document.getElementById('location').value;
+      
+      // Simulated service finder results
+      let result = `Buscando ${serviceType}s`;
+      if (location) {
+        result += ` cerca de ${location}`;
+      }
+      result += "...\n\n";
+
+      switch(serviceType) {
+        case 'hotel':
+          result += "1. Hotel Riu Plaza España (4.5 estrellas)\n2. The Hat Madrid (4.2 estrellas)\n3. Hotel Ópera (4.0 estrellas)";
+          break;
+        case 'restaurant':
+          result += "1. Casa Botín (4.4 estrellas)\n2. Mercado de San Miguel (4.3 estrellas)\n3. La Bola Taberna (4.2 estrellas)";
+          break;
+        case 'metro':
+          result += "1. Estación Sol\n2. Estación Gran Vía\n3. Estación Tribunal";
+          break;
+        case 'hospital':
+          result += "1. Hospital Universitario La Paz\n2. Hospital Clínico San Carlos\n3. Hospital General Universitario Gregorio Marañón";
+          break;
+      }
+      
+      document.getElementById('service-results').textContent = result;
+    });
+  </script>
 </body>
 </html>
